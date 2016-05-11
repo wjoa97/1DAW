@@ -46,6 +46,11 @@ public class MDI extends javax.swing.JFrame {
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Archivo");
+        fileMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fileMenuActionPerformed(evt);
+            }
+        });
 
         openMenuItem.setMnemonic('o');
         openMenuItem.setText("Abrir ");
@@ -137,8 +142,12 @@ public class MDI extends javax.swing.JFrame {
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
         Ventana g = new Ventana();
         desktopPane.add(g);
-        setVisible(true);
+        g.setVisible(true);
     }//GEN-LAST:event_openMenuItemActionPerformed
+
+    private void fileMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuActionPerformed
+        
+    }//GEN-LAST:event_fileMenuActionPerformed
 
     /**
      * @param args the command line arguments

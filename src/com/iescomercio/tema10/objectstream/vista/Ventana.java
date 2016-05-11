@@ -8,12 +8,12 @@ import javax.swing.*;
 import javax.swing.event.InternalFrameEvent;
 import javax.swing.event.InternalFrameListener;
 
-public class Ventana extends JInternalFrame implements ActionListener, InternalFrameListener {
+public class Ventana extends JInternalFrame implements WindowListener, ActionListener, InternalFrameListener {
 
     private final JPanel jpSuperior, jpDatos, jpInferior;
     private final GridBagConstraints gridSuperior, gridDatos;
     private final JLabel jlMatricula, jlMetroEslora, jlAñoFabricacion, jlCamarotes;
-    private final JTextField jtfMatricula, jtfMetroEslora, jtfAñoFabricacion, jtfCamarotes;
+    private final JTextField jtfMatricula, jtfMetroEslora, jtfAñoFabricacion, jtfCamarotes, jtfBuscar;
     private final JButton jbNuevo, jbModificar, jbEliminar, jbAnterior, jbSiguiente, jbBuscar, jbAceptar, jbCancelar;
     private JButton jbPulsado;
     private final ImageIcon iNuevo, iModificar, iEliminar, iAnterior, iSiguiente, iBuscar, iAceptar, iCancelar;
@@ -52,6 +52,7 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
         jtfMetroEslora = new JTextField("");
         jtfAñoFabricacion = new JTextField("");
         jtfCamarotes = new JTextField("");
+        jtfBuscar = new JTextField("");
         jbNuevo = new JButton("Nuevo", iNuevo);
         jbModificar = new JButton("Modificar", iModificar);
         jbEliminar = new JButton("Eliminar", iEliminar);
@@ -93,7 +94,7 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
         gridSuperior.fill = GridBagConstraints.HORIZONTAL;
         gridSuperior.weightx = 1.0;
         gridSuperior.gridx = 5;
-        jpSuperior.add(jtfMatricula, gridSuperior);
+        jpSuperior.add(jtfBuscar, gridSuperior);
         gridSuperior.weightx = 0;
 
         //Botón buscar
@@ -119,7 +120,7 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
         gridDatos.gridy = 0;
         gridDatos.weightx = 1.0;
         gridDatos.insets = new Insets(10, 10, 10, 10);
-        jpDatos.add(jtfMetroEslora, gridDatos);
+        jpDatos.add(jtfMatricula, gridDatos);
         
         //Txt Nombre
         gridDatos.gridy = 1;
@@ -141,13 +142,13 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
         
         //Txt Apellido1
         gridDatos.gridx = 3;
-        gridDatos.gridy = 1;
+        gridDatos.gridy = 0;
         gridDatos.weightx = 1.0;
         gridDatos.insets = new Insets(10, 10, 10, 35);
         jpDatos.add(jtfAñoFabricacion, gridDatos);
 
         //Txt Apellido2
-        gridDatos.gridy = 2;
+        gridDatos.gridy = 1;
         jpDatos.add(jtfCamarotes, gridDatos);
         gridDatos.weightx = 0;
         gridDatos.insets = new Insets(0, 0, 0, 0);
@@ -167,19 +168,17 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
         jbAceptar.addActionListener(this);
         jbCancelar.addActionListener(this);
 
-        jpDatos.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Datos cliente"), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+        jpDatos.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Datos barco"), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         textoEditable(false);
 
         Dimension d = new Dimension(700, 300);
-        setMinimumSize(d);
-//        setLocation(null);
+//        setMinimumSize(d);
         setTitle("Cliente");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        Ventana v = new Ventana();
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setVisible(true);
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
     }
 
     public void vaciarTexto() {
@@ -309,4 +308,40 @@ public class Ventana extends JInternalFrame implements ActionListener, InternalF
     @Override
     public void internalFrameDeactivated(InternalFrameEvent e) {
     }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
