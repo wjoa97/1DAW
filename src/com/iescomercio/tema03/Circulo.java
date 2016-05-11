@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 import static java.lang.Math.PI;
 import java.util.Scanner;

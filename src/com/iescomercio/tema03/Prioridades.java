@@ -1,4 +1,4 @@
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 /**
  *5. Calcula e indica el resultado de las siguientes operaciones, teniendo

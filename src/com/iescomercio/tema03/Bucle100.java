@@ -1,4 +1,4 @@
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 /**
  * Mostra los 100 primeros números naturales

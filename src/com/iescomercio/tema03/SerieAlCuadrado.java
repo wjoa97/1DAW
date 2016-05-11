@@ -1,4 +1,4 @@
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 /**
  *7. Realizar un programa en Java que calcula y muestra por pantalla el 

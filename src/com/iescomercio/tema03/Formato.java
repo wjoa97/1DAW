@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 /**
  * Realizar programa que declare una variable de termino entero, inicializada

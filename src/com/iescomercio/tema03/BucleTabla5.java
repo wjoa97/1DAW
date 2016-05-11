@@ -1,4 +1,4 @@
-package com.iescomercio.tema3;
+package com.iescomercio.tema03;
 
 /**
  * 2.	Realizar un programa que muestre los números de la tabla del 5 hasta 500.
