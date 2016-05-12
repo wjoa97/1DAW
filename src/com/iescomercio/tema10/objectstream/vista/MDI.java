@@ -142,7 +142,7 @@ public class MDI extends javax.swing.JFrame {
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
         Ventana g = new Ventana();
         desktopPane.add(g);
-        g.setVisible(true);
+//        g.setVisible(true);
     }//GEN-LAST:event_openMenuItemActionPerformed
 
     private void fileMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuActionPerformed

@@ -8,7 +8,7 @@ import javax.swing.*;
 import javax.swing.event.InternalFrameEvent;
 import javax.swing.event.InternalFrameListener;
 
-public class Ventana extends JInternalFrame implements WindowListener, ActionListener, InternalFrameListener {
+public class Ventana extends JFrame implements ActionListener, InternalFrameListener {
 
     private final JPanel jpSuperior, jpDatos, jpInferior;
     private final GridBagConstraints gridSuperior, gridDatos;
@@ -159,6 +159,7 @@ public class Ventana extends JInternalFrame implements WindowListener, ActionLis
         //Botón cancelar
         jpInferior.add(jbCancelar);
 
+//        addInternalFrameListener(this);
         jbNuevo.addActionListener(this);
         jbModificar.addActionListener(this);
         jbEliminar.addActionListener(this);
@@ -172,13 +173,13 @@ public class Ventana extends JInternalFrame implements WindowListener, ActionLis
         textoEditable(false);
 
         Dimension d = new Dimension(700, 300);
-//        setMinimumSize(d);
+        setMinimumSize(d);
         setTitle("Cliente");
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setVisible(true);
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+//        setClosable(true);
+//        setIconifiable(true);
+//        setMaximizable(true);
     }
 
     public void vaciarTexto() {
@@ -308,40 +309,9 @@ public class Ventana extends JInternalFrame implements WindowListener, ActionLis
     @Override
     public void internalFrameDeactivated(InternalFrameEvent e) {
     }
-
-    @Override
-    public void windowOpened(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowClosed(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    public static void main(String[] args) {
+        Ventana v = new Ventana();
+        
+    }
 }
