@@ -27,7 +27,6 @@ public class Baraja {
         return N;
     }
 
-    // shuffles cards
     public void barajar() {
         for (int i = 0; i < N; i++) {
             int r = (int) (Math.random() * i);
@@ -45,7 +44,6 @@ public class Baraja {
         return s;
     }
 
-    // test client
     public static void main(String[] args) {
         Baraja baraja = new Baraja();
         System.out.println(baraja);
